@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura</title>
+    <link rel="icon" href="Anu/icon.png" type="image/png" style="border-radius: 50%;">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap" rel="stylesheet">
+</head>
+<body>    
+    <nav id="nav">
+        <div id="blur"></div>
+        <div>
+            <img src="Anu/1729962555128.png" alt="" width="40px">
+        </div>
+        <div>
+            <span id="nama">AURA</span>
+        </div>
+    </nav>
+    <div id="landing" class="tabContent">
+        <div id="backdrop"></div>
+        
+        <div id="icon" class="active">
+            <img src="Anu/icon.png" alt="" width="85%">
+        </div>
+        <div id="judul">
+            <span style="color: #FF6600; margin-left: 29px; font-size: 32px; font-weight: 600;">Hai Aura <img src="Anu/Animation - 1729953839280.gif" alt="" width="48px"></span> </br>
+            <span id="center" style="color:#8FD14F;  font-size: 30px; font-weight: 600; ">Ini Adalah Web Kamuu<img src="Anu/Animation - 1729953667469.gif" alt="" width="48px" height="48px"></span>
+           <span id="aww">Kamu adalah gadis termanis di dunia</span>
+           <span style="font-size: x-small; color: white;">maaf yaw fotonya seadanya</span>
+           <h4 style="color: white; margin-top: 20px;">Klik Bintangnya dong</h4> 
+           <div class="bintang">
+                <img onclick="bintang()" class="bintangku" src="Anu/Star 1.png" alt="" width="50px">
+                <img onclick="bintang()" class="bintangku" src="Anu/Star 1.png" alt="" width="50px">
+                <img onclick="bintang()" class="bintangku" src="Anu/Star 1.png" alt="" width="50px">
+                <img onclick="bintang()" class="bintangku" src="Anu/Star 1.png" alt="" width="50px">
+                <img onclick="bintang()" class="bintangku" src="Anu/Star 1.png" alt="" width="50px">
+            </div>
+            <button class="tablink" id="lanjut" onclick="openTab('isi', this)">LANJUT</button>
+        </div>
+    </div>
+    <div id="isi" class="tabContent">
+        <div id="backdrop1"></div>
+        <h1 style="color: white; font-family: 'Lobster', sans-serif; align-items: center; display: flex; justify-content: center;">ABAOUT YOU</h1>
+        <div id="a1">
+            <img id="gambar-1" src="Anu/Group 27.png" alt="" width="200px">
+            <h2 id="keterangan">Cute</h2>
+        </div>
+        <div id="a2">
+            <h2 id="keterangan">Beautiful</h2>
+            <img id="gambar-1" src="Anu/Group 28.png" alt="" width="215px">
+        </div>
+        <div id="a3">
+            <h2 id="keterangan">Funny</h2>
+            <h2 id="keterangan1">Sweet</h2>
+        </div>
+    <button class="tablink" onclick="openTab('landing', this)" id="defaultOpen">
+
+    </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
