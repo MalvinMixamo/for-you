@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aura</title>
-    <link rel="icon" href="Anu/icon.png" type="image/png" style="border-radius: 50%;">
+    <title id="title">Aura</title>
+    <link rel="icon" href="Anu/cancel.png" id="iconHead" type="image/png" style="border-radius: 50%;">
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,7 +16,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap" rel="stylesheet">
 </head>
-<body>    
+<body>
+    <div id="kosong" class="tabContent">
+        <span>kosomg</span>
+    </div>
+    <div class="namaTidakSesuai">
+        <h1>ERROR 404</h1>
+        <span>this site is null</span>
+    </div>
     <nav id="nav">
         <div id="blur"></div>
         <div>
@@ -49,8 +56,10 @@
         </div>
     </div>
     <div id="isi" class="tabContent">
-        <div id="backdrop1"></div>
-        <h1 style="color: white; font-family: 'Lobster', sans-serif; align-items: center; display: flex; justify-content: center;">ABAOUT YOU</h1>
+        <div id="backdrop1">
+            <img id="bintangAww" src="Anu/pngwing.com (44).png" alt="">
+        </div>
+        <h1 style="color: white; font-family: 'Lobster', sans-serif; align-items: center; display: flex; justify-content: center;">ABOUT YOU</h1>
         <div id="a1">
             <img id="gambar-1" src="Anu/Group 27.png" alt="" width="200px">
             <h2 id="keterangan">Cute</h2>
@@ -61,9 +70,47 @@
         </div>
         <div id="a3">
             <h2 id="keterangan">Funny</h2>
+            <img src="Anu/Group 29.png" alt="" width="215px">
             <h2 id="keterangan1">Sweet</h2>
         </div>
+        <div id="miaw">
+            <h2 id="keterangan">calculatol Ajaib</h2>
+            <div class="calculator">
+                <input type="text" id="display" disabled>
+                <div class="buttons">
+                    <button onclick="appendToDisplay('1')">1</button>
+                    <button onclick="appendToDisplay('2')">2</button>
+                    <button onclick="appendToDisplay('3')">3</button>
+                    <button onclick="appendToDisplay('+')">+</button>
+                    <button onclick="appendToDisplay('4')">4</button>
+                    <button onclick="appendToDisplay('5')">5</button>
+                    <button onclick="appendToDisplay('6')">6</button>
+                    <button onclick="appendToDisplay('-')">-</button>
+                    <button onclick="appendToDisplay('7')">7</button>
+                    <button onclick="appendToDisplay('8')">8</button>
+                    <button onclick="appendToDisplay('9')">9</button>
+                    <button onclick="appendToDisplay('*')">x</button>
+                    <button onclick="clearDisplay()">C</button>
+                    <button onclick="appendToDisplay('0')">0</button>
+                    <button onclick="appendToDisplay('/')">/</button>
+                    <button onclick="calculate()">=</button>
+                </div>
+            </div>
+        </div>
+        <div id="">
+            <!-- <span>
+                    In sollicitudin sapien urna, ut auctor nisi laoreet eget. Donec dapibus elementum vulputate. In eleifend nisl neque, quis tincidunt enim congue et. Integer congue sapien ac enim semper accumsan in eu lectus. Duis cursus malesuada porta. 
+                Vivamus vitae consequat orci. Maecenas turpis mauris, fringilla vel urna et, bibendum efficitur arcu. Etiam nec eleifend dui. Donec commodo dictum eleifend. Nulla vitae eros ac lectus gravida lobortis. Pellentesque pulvinar neque leo, at 
+                sagittis tortor efficitur at. Nam sit amet interdum libero, a faucibus orci. Mauris varius purus vel pretium accumsan. Donec metus odio, cursus ac fringilla suscipit, vehicula et odio.
+            </span> -->
+        </div>
     <button class="tablink" onclick="openTab('landing', this)" id="defaultOpen">
+
+    </button>
+    <button class="tablink" onclick="openTab('namaTidakSesuai', this)" id="tidakSesuai">
+
+    </button>
+    <button class="tablink" onclick="openTab('kosong', this)" id="btnKosong">
 
     </button>
     </div>

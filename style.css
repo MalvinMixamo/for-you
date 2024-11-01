@@ -3,10 +3,21 @@
     padding: 0;
     font-family: 'Inter', sans-serif;
 }
+.tabContent{
+    display: none;
+}
 html, body {
     height: 100vh; 
     width: 100vw;
     margin: 0;
+}
+.namaTidakSesuai{    
+    display: none;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 #backdrop{
     position: fixed;
@@ -18,6 +29,12 @@ html, body {
     filter: brightness(68%);
     z-index: -1;
     transition: background 1s ease;
+}
+#kosong{
+    position: fixed;
+}
+#bintangAww{
+    animation: backAww 120s linear infinite;
 }
 #backdrop1{
     position: fixed;
@@ -43,7 +60,7 @@ nav div img{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    align-content: flex-end;
+    align-content: center;
 }
 #isi{
     margin-top: 100px;
@@ -99,6 +116,53 @@ nav div img{
 #aww{
     color: #F5F5F5;
 }
+.calculator {
+    width: 220px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+#miaw{
+    display: flex;
+    justify-content: center ;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.buttons button{
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+.buttons button:last-child {
+    background-color: #ff4081;
+    color: #ffffff;
+}
 nav{
     position: fixed;
     top: 0;
@@ -107,7 +171,7 @@ nav{
     height:44px;
     padding: 10px 0;
     z-index: 1000;
-    display: flex;
+    display: none;
     align-items: center;
     flex-direction: row;
     padding: 10px 20px;
@@ -118,11 +182,11 @@ nav{
     font-weight: 900;
     font-size: 24px;
 }
-#a1 #gambar-1 .active{
+#gambar-1.active{
     transform: rotate(-6deg);
-    animation: bounce-left 1s ease;
+    animation: bounce-left 1s ease 0s 1 normal forwards;
 }
-#a1 #gambar-1 .out{
+#a1 #gambar-1.out{
     transform: rotate(-6deg);
     animation: fadeOut-left 1s ease;
 }
@@ -133,6 +197,19 @@ nav{
     align-content: flex-start;
     justify-content: flex-start;
     align-items: center
+}
+#miaw{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center
+}
+#miaw #keterangan{
+    font-family: 'Lobster', sans-serif;
+    color:rgb(24, 136, 130);
+    font-size: 40px;
 }
 #a1 #keterangan{
     font-family: 'water Brush', cursive;
@@ -165,20 +242,20 @@ nav{
     flex-wrap: wrap;
     align-content: center;
     justify-content: center;
-    align-items: center
+    align-items: center;
 }
 #a3 #keterangan{
     font-family: 'water Brush', cursive;
     color:#482cd2;
     font-size: 80px;
-    transform: rotate(-6deg);
+    transform: rotate(-12deg);
     padding: 5px;
 }
 #a3 #keterangan1{
     font-family: 'water Brush', cursive;
-    color:#482cd2;
+    color:#a42d8c;
     font-size: 80px;
-    transform: rotate(-6deg);
+    transform: rotate(90deg);
     padding: 5px;
 }
 @keyframes fadeOut-left {
@@ -191,6 +268,17 @@ nav{
 		opacity: 0;
 		transform: translateX(-50px);
 	}
+}
+@keyframes backAww{
+    0%{
+        transform: translateX(-735px) rotate(0deg);
+    }
+    50%{
+        transform: translateX(-735px) rotate(360deg);
+    }
+    100%{
+        transform: translateX(-735px) rotate(0deg);
+    }
 }
 @keyframes bounce-left {
 	0% {
