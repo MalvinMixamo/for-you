@@ -59,21 +59,27 @@
         <div id="backdrop1">
             <img id="bintangAww" src="Anu/pngwing.com (44).png" alt="">
         </div>
+        <div id="backgroundIfGiftOn" onclick="menonaktifkanGift(this)">
+
+        </div>
         <h1 style="color: white; font-family: 'Lobster', sans-serif; align-items: center; display: flex; justify-content: center;">ABOUT YOU</h1>
         <div id="a1">
-            <img id="gambar-1" src="Anu/Group 27.png" alt="" width="200px">
+            <img onclick="openGift('miaw', this), mengaktifkanBackground()"  class="openGift" id="gambar-1" src="Anu/Group 27.png" alt="" width="200px">
             <h2 id="keterangan">Cute</h2>
         </div>
         <div id="a2">
             <h2 id="keterangan">Beautiful</h2>
-            <img id="gambar-1" src="Anu/Group 28.png" alt="" width="215px">
+            <img onclick="openGift('giftSuprise', this)" class="openGiftS" src="Anu/Group 29.png" alt="" width="215px">
         </div>
         <div id="a3">
             <h2 id="keterangan">Funny</h2>
-            <img src="Anu/Group 29.png" alt="" width="215px">
+            <a href="bunga.html"><img id="gambar-1" class="openGift" src="Anu/Group 28.png" alt="" width="215px"></a>
             <h2 id="keterangan1">Sweet</h2>
         </div>
-        <div id="miaw">
+        <div id="kosongg" class="gift">
+
+        </div>
+        <div id="miaw" class="gift">
             <h2 id="keterangan">calculatol Ajaib</h2>
             <div class="calculator">
                 <input type="text" id="display" disabled>
@@ -97,13 +103,14 @@
                 </div>
             </div>
         </div>
-        <div id="">
-            <!-- <span>
-                    In sollicitudin sapien urna, ut auctor nisi laoreet eget. Donec dapibus elementum vulputate. In eleifend nisl neque, quis tincidunt enim congue et. Integer congue sapien ac enim semper accumsan in eu lectus. Duis cursus malesuada porta. 
-                Vivamus vitae consequat orci. Maecenas turpis mauris, fringilla vel urna et, bibendum efficitur arcu. Etiam nec eleifend dui. Donec commodo dictum eleifend. Nulla vitae eros ac lectus gravida lobortis. Pellentesque pulvinar neque leo, at 
-                sagittis tortor efficitur at. Nam sit amet interdum libero, a faucibus orci. Mauris varius purus vel pretium accumsan. Donec metus odio, cursus ac fringilla suscipit, vehicula et odio.
-            </span> -->
+        <div id="giftSuprise" class="gift">
+            <div class="gift-box" id="giftBox">
+                <div class="ribbon-vertical"></div>
+                <div class="ribbon-horizontal"></div>
+                <div class="message">🎉 josfsklfhsklfsjkfgsfeuifsuifgusifguksisukas! 🎉</div>
+            </div>
         </div>
+        
     <button class="tablink" onclick="openTab('landing', this)" id="defaultOpen">
 
     </button>
@@ -113,7 +120,23 @@
     <button class="tablink" onclick="openTab('kosong', this)" id="btnKosong">
 
     </button>
+    <button id="defaultOpenGift" onclick="openGift('kosongg', this)">
+
+    </button>
     </div>
+    <div id="isiPesan">
+
+    </div>
+    <!-- <div id="isiPesan" >
+        <span id="isiPesan">
+            "Mungkin ini bukan yang aku inginkan, tapi ini yang harus aku lakukan. Aku melepaskanmu, 
+            bukan karena aku tidak peduli, 
+            tapi karena aku harus menjaga diriku juga. 
+            Terima kasih sudah menjadi bagian dari hidupku. 
+            Aku harap kamu menemukan bahagia yang tidak bisa aku berikan." <br><br>
+            "Kadang, cinta juga berarti merelakan. Aku ingin kamu tahu bahwa aku melepaskanmu bukan karena rasa ini hilang, tapi karena aku sudah lelah berjuang sendirian. Aku harap kamu mengerti, dan semoga kamu menemukan yang terbaik untukmu."
+        </span>
+    </div> -->
     <script src="script.js"></script>
 </body>
 </html>

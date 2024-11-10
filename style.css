@@ -136,10 +136,6 @@ nav div img{
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-#miaw{
-    display: flex;
-    justify-content: center ;
-}
 .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -198,7 +194,46 @@ nav{
     justify-content: flex-start;
     align-items: center
 }
-#miaw{
+#backgroundIfGiftOn{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #33333367;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+#backgroundIfGiftOn.thisAktive{
+    display: block;
+    z-index: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #33333367;
+    width: 100vw;
+    height: 100vh;
+}
+.gift{
+    display: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 50%;
+    bottom: 50%;
+    left: 0;
+    right: 0;
+}
+.openGift{
+    transition: transform 0.5s ease 0s;
+}
+.openGift:hover{
+    transform: scale(1.1);
+}
+#calculator{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -257,6 +292,89 @@ nav{
     font-size: 80px;
     transform: rotate(90deg);
     padding: 5px;
+}
+
+.gift-box {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    background-color: #ff4757;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.4s;
+    overflow: hidden;
+}
+
+/* Tutup hadiah */
+.gift-box::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    background-color: #ff6b81;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.4s;
+}
+
+/* Pita vertikal */
+.ribbon-vertical {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 100%;
+    background-color: #ffa502;
+}
+#isiPesan{
+    display: none;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 215px;
+    font-style: italic;
+}
+/* Pita horizontal */
+.ribbon-horizontal {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 20px;
+    background-color: #ffa502;
+}
+
+/* Animasi buka hadiah */
+.gift-box.open {
+    transform: scale(1.1);
+}
+
+.gift-box.open::before {
+    transform: translateY(-100%);
+}
+
+/* Pesan di dalam hadiah */
+.message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.gift-box.open .message {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 @keyframes fadeOut-left {
 	0% {

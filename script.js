@@ -1,7 +1,10 @@
+const isiPesan = document.getElementById('isiPesan');
+isiPesan.style.display = 'none';
 const tabC = document.getElementsByClassName('tabContent');
 for(var a = 0; a < tabC.length; a++){
     tabC[a].style.display = 'none';
 }
+
 function openTab(namaTab, elemnt) {
     var i, tabContent, tablinks;
     
@@ -40,11 +43,52 @@ function openTab(namaTab, elemnt) {
 //             element.classList.add('active');
 //         }
 //     });
-// }
+// 
+const giftBox = document.getElementById('giftBox');
+        let giftBoxAktif = false;
+        const tabB = document.getElementsByClassName('tabContent');
+        // Tambahkan event listener untuk membuka hadiah
+        giftBox.addEventListener('click', function() {
+            giftBox.classList.add('open');
+            giftBoxAktif = true;
+            for(var t = 0; t < tabB.length; t++){
+                tabB[t].style.display = 'none';
+            }
+            isiPesan.style.display = 'flex';
+        });
+const background = document.getElementById('backgroundIfGiftOn');
+background.style.display = 'none';
 
-// window.addEventListener('scroll', checkScroll);
+function mengaktifkanBackground(){
+    background.style.display = 'block';
+    background.classList.add ('thisAktive');
+}
+function menonaktifkanGift(popampim){
+    const gift = document.getElementsByClassName('gift');
+    for(var x = 0; x < gift.length; x++){
+        gift[x].style.display = 'none';
+    }
+    popampim.style.display = 'none';
+}
+function openGift(namaGift, btn){
+    const gift = document.getElementsByClassName('gift');
+    const gambar = document.getElementsByClassName('openGift');
+    const apalah = document.getElementById('kosongg');
+    for(i = 0; i < gambar.length; i++){
+        gambar[i].classList.remove('aktif');
+    }
 
-
+    var i;
+    for(i = 0; i < gift.length; i++){
+        gift[i].style.display = 'none';
+        gift[i].classList.remove('giftAktif');
+    }
+    btn.classList.add('aktif');
+    // background.style.display = 'block';
+    document.getElementById(namaGift).classList.add('giftAktif');
+    document.getElementById(namaGift).style.display = 'flex';
+}
+document.getElementById('defaultOpenGift').click();
 let jumlahAktif = 0;
 const btn = document.getElementById('lanjut');
 btn.style.display = 'none';
@@ -183,7 +227,7 @@ function calculate(){
         }else if(tulisan < 0.5){
             result.value = 'kamuu unyuuu';
         }else if(tulisan < 0.6){
-            result.value = 'Calculatolnya agi ucak >.<';
+            result.value = 'kamuu cantik';
         }else if(tulisan < 0.7){
             result.value = 'Love you ❤️';
         }else if(tulisan < 0.8){
@@ -194,11 +238,25 @@ function calculate(){
             result.value = 'Huwaaaaa 😫'; 
         }
     }else if(random < 0.7){
-        try{
-            let result = eval(document.getElementById('display').value);
-            document.getElementById('display').value = result;
-        }catch(error){
-            document.getElementById('display').value = 'calculatol nya ucak';
+        if(tulisan < 0.1){
+        }else if(tulisan < 0.2){
+            result.value = 'Kamuu maniss';
+        }else if(tulisan < 0.3){
+            result.value = 'Kamuu lucuuu';
+        }else if(tulisan < 0.4){
+            result.value = 'Kamuu imuutt';
+        }else if(tulisan < 0.5){
+            result.value = 'kamuu unyuuu';
+        }else if(tulisan < 0.6){
+            result.value = 'Calculatolnya agi ucak >.<';
+        }else if(tulisan < 0.7){
+            result.value = 'Love you ❤️';
+        }else if(tulisan < 0.8){
+            result.value = 'Apalagi yaww🤔';
+        }else if(tulisan < 0.9){
+            result.value = 'Calculatolya salying😣';
+        }else if(tulisan < 1){
+            result.value = 'Huwaaaaa 😫'; 
         }
     }else if(random < 0.8){
         if(tulisan < 0.1){
@@ -222,11 +280,25 @@ function calculate(){
             result.value = 'Huwaaaaa 😫'; 
         }
     }else if(random < 0.9){
-        try{
-            let result = eval(document.getElementById('display').value);
-            document.getElementById('display').value = result;
-        }catch(error){
-            document.getElementById('display').value = 'calculatol nya ucak';
+        if(tulisan < 0.1){
+        }else if(tulisan < 0.2){
+            result.value = 'Kamuu maniss';
+        }else if(tulisan < 0.3){
+            result.value = 'Kamuu lucuuu';
+        }else if(tulisan < 0.4){
+            result.value = 'Kamuu imuutt';
+        }else if(tulisan < 0.5){
+            result.value = 'kamuu unyuuu';
+        }else if(tulisan < 0.6){
+            result.value = 'Calculatolnya agi ucak >.<';
+        }else if(tulisan < 0.7){
+            result.value = 'Love you ❤️';
+        }else if(tulisan < 0.8){
+            result.value = 'Apalagi yaww🤔';
+        }else if(tulisan < 0.9){
+            result.value = 'Calculatolya salying😣';
+        }else if(tulisan < 1){
+            result.value = 'Huwaaaaa 😫'; 
         }
     }else if(random <= 1){
         if(tulisan < 0.1){
