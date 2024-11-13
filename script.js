@@ -104,7 +104,7 @@ function bintang() {
             btn.classList.add('active');
         }
         console.log('Jumlah bintang aktif = ' + jumlahAktif);
-    } else {
+    } else{
         console.log('Semua bintang sudah aktif');
     }
 }
@@ -117,7 +117,11 @@ document.getElementById('btnKosong').click();
 let nama = prompt('Masukan nama panggilanmu : ');
 let tab = document.querySelector('.namaTidakSesuai');
 document.getElementById('kosong').style.display = 'block';
-
+const music = document.getElementById('music');
+document.getElementById('lanjut').addEventListener('click', function(){
+    const music = document.getElementById('music');
+    music.play();
+});
 const nav = document.getElementById('nav');
 let text;
 if(nama === null || nama === ''){
@@ -127,7 +131,7 @@ if(nama === null || nama === ''){
     title.textContent = 'null';
     head.href = 'Anu/cancel.png';
     document.getElementById('tidakSesuai').click();
-}else if(nama === 'aura' || nama === "Aura" || nama === 'auraa' || nama === 'aura dhia syarafana' || nama === 'Aura Dhia Syarafana' || nama === 'Pacarnya Malvin' || nama === 'Pacarnya malvin' || nama === 'pacarnya malvin' || nama === 'Aura imut'){
+}else if(nama === 'aura' || nama === "Aura" || nama === 'Aura ' || nama === 'auraa' || nama === 'aura dhia syarafana' || nama === 'Aura Dhia Syarafana' || nama === 'Pacarnya Malvin' || nama === 'Pacarnya malvin' || nama === 'pacarnya malvin' || nama === 'Aura imut'){
     document.getElementById('defaultOpen').click();
     tab.style.display = 'none';
     nav.style.display = 'flex';
@@ -158,7 +162,7 @@ function calculate(){
             let result = eval(document.getElementById('display').value);
             document.getElementById('display').value = result;
         }catch(error){
-            document.getElementById('display').value = 'calculatol nya ucak';
+            document.getElementById('display').value = 'calculatol nya ]        ucak';
         }
     }else if(random < 0.2){
         if(tulisan < 0.1){

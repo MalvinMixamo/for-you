@@ -17,6 +17,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Water+Brush&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio id="music">
+        <source src="Anu/Arctic Monkeys - I Wanna Be Yours_fukGbiPuBjU.mp3" type="audio/mpeg">
+    </audio>
     <div id="kosong" class="tabContent">
         <span>kosomg</span>
     </div>
@@ -80,8 +83,8 @@
 
         </div>
         <div id="miaw" class="gift">
-            <h2 id="keterangan">calculatol Ajaib</h2>
             <div class="calculator">
+                <h2 id="keterangan">calculatol Ajaib</h2>
                 <input type="text" id="display" disabled>
                 <div class="buttons">
                     <button onclick="appendToDisplay('1')">1</button>
@@ -124,8 +127,19 @@
 
     </button>
     </div>
-    <div id="isiPesan">
-
+    <div id="isiPesan" class="gift">
+        <!-- <span>Haiii Auraa gimana kabarnyaa? Sehattt?</span>
+        <button id="iya">Eng, Sehatt</button>
+        <button id="tidak">Baru sakit</button>
+        <div id="sehat" class="gift">
+            <span>Alhamdulillah kalau sehat, hehe😁 Makasih yaa au udah nemenin akuu lebih dari 1 tahunn, udahh mau jadi tempat curhatkuu             
+            </span>
+        </div> -->
+        <div id="rusak">
+            <img src="Anu/pngwing.com (49).png" alt="" width="350px">
+            <span>Maaf au, page ini sedang dalam perbaikan</span>
+            <button onclick="openTab('isi', this), menonaktifkanGift(this)" id="oke">okeyy</button>
+        </div>
     </div>
     <!-- <div id="isiPesan" >
         <span id="isiPesan">
