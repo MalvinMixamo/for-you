@@ -30,7 +30,14 @@ function openTab(namaTab, elemnt) {
     elemnt.classList.add('active');
     elemnt.style.color = '#76FF03';
 }
-
+document.getElementById('iya').addEventListener('click', function(){
+    document.getElementById('awal').style.display = 'none';
+    document.getElementById('sehat').style.display = 'flex';
+});
+document.getElementById('tidak').addEventListener('click', function(){
+    document.getElementById('awal').style.display = 'none';
+    document.getElementById('sakit').style.display = 'flex';
+});
 // const rotatingElements = document.querySelectorAll('#gambar-1');
 
 // function checkScroll() {
@@ -88,6 +95,11 @@ function openGift(namaGift, btn){
     document.getElementById(namaGift).classList.add('giftAktif');
     document.getElementById(namaGift).style.display = 'flex';
 }
+document.getElementById('giftBox').addEventListener('click', function(){
+    document.getElementById('awal').style.display = 'flex';
+    document.getElementById('oke').style.display = 'block';
+    document.getElementById('oke1').style.display = 'block';
+});
 document.getElementById('defaultOpenGift').click();
 let jumlahAktif = 0;
 const btn = document.getElementById('lanjut');
@@ -109,6 +121,7 @@ function bintang() {
     }
 }
 
+
 const title = document.getElementById('title');
 const head = document.getElementById('iconHead');
 head.href = 'Anu/cancel.png';
@@ -121,6 +134,9 @@ const music = document.getElementById('music');
 document.getElementById('lanjut').addEventListener('click', function(){
     const music = document.getElementById('music');
     music.play();
+});
+document.getElementById('oke').addEventListener('click', function(){
+    document.getElementById('giftBox').classList.remove('open');
 });
 const nav = document.getElementById('nav');
 let text;
